@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{studenName}}</h1>
+        <button @click="getName">点名</button>
+    </div>
+    <script src="../js学习/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                nameList:["小明", "小亮", "小红"],
+                studenName: '同学名字'
+            },
+            methdos: {
+                getName() {
+                    this.studenName = this.nameList[this.getRandom()]
+                },
+                getRandom() {
+                    return Math.floor(Math.random() * this.nameList.length)
+                }
+            }
+        })
+    </script>
+
+
+    <!-- <div id="app1">
+        <h1>{{studentName}}</h1>
+        <button @click="getName">点名</button>
+    </div>
+    <script src="../js学习/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app1",
+            data: {
+                nameList: ["小明", "小亮", "小红"],
+                studentName: '同学名字'
+            },
+            methods: {
+                getName() {
+                    this.studentName = this.nameList[this.getRandom()];
+                },
+                getRandom() {
+                    return Math.floor(Math.random() * this.nameList.length)
+                }
+            }
+        })
+    </script> -->
+</body>
+
+</html>
