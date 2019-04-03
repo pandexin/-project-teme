@@ -8,9 +8,17 @@
 </head>
 <body>
     <script>
-        var friends =["This","is","JavaScript","and","jQuery"];
-        var str = friends.join();
-        console.log(str);
+        var res = 0;
+        function count(m){
+            for(var i=0;i<m;i++){
+                if(i%2==1){
+                    res+=i;
+                }
+            }
+            return res;
+        }
+        var result = count(10);
+        console.log(result);
     </script>
 </body>
 </html>
